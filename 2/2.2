@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Введите ваше число: ");
+        int digit = scan.nextInt();
+        int multiplier = 2;
+
+        if (digit <= 1)
+            System.out.println("нет простых множетелей");
+
+        while (digit > 1){
+            if (digit % multiplier == 0){
+                System.out.print(multiplier + " ");
+                digit /= multiplier;
+            }else if (digit % multiplier != 0)
+                multiplier += 1;
+        }
+    }
+}
